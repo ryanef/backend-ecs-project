@@ -5,8 +5,6 @@ import json
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-
-
 app = FastAPI()
 
 
@@ -25,7 +23,7 @@ app.add_middleware(
 
 @app.get("/")
 def home():
-    return "hello from "
+    return "hello from root"
 
 @app.get("/api")
 def read_root():
@@ -35,7 +33,7 @@ def read_root():
 
 @app.get("/api/profile")
 def read_root():
-    message = "Your profile!"
+    message = "Hello from /api/profile on port 5000 from a different private subnet!"
     return message
 
 if __name__ == '__main__':

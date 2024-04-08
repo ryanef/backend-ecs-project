@@ -1,7 +1,4 @@
 fastapi
-pydantic
 boto3
-botocore
 uvicorn[standard]
-pandas
 aws-xray-sdk
